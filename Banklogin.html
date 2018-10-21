@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Welcome to YES Bank.
+</title>
+<link rel="shortcut icon" href="tick.ico"/>
+<link rel="stylesheet" href="Banklogin.css"/>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0/angular-material.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+<link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0/angular-material.css">
+<link rel="stylesheet" href="https://material.angularjs.org/1.1.0/docs.css">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" /> <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script> 
+</head>
+<body ng-app="myApp" ng-controller="myctrl" class="myDiv">
+<div class="bdy"></div>
+<h1 id="h1">Govt. College. Rajahmundry</h1>
+<div class="main">
+<ul class="jumborton">
+<span id="msg"> {{message}}</span>
+<h4> Login</h4>
+<div class="form-group has-primary has-feedback">
+Username:</div>
+<div class="col-sm-8"><input tye="text" ng-model="name" placeholder="Enter UserId"></div>
+<br></br>
+<div class="form-group has-primary has-feedback">
+Password:</div>
+<div class="col-sm-8"><input type="password" ng-model="password" placeholder="Enter Password"></div>
+<br>
+<br>
+<div class="form-group"><input type="button" value="Continue" ng-click="goto();"></div>
+
+
+<div class="sidediv"><h4> Site usage and Policies</h4>
+<div><a href="https://www.yesbank.in/pdf/process"><u>Optimal Settings</u></a></div>
+<div><a href="https://www.yesbank.in/pdf/mobilebankingt_c"><u>Terms of Use & Notices</u></a></div>
+<div><a href="https://www.yesbank.in/pdf/footer_privacypolicy"><u>Privacy policy</u></a></div>
+<p> By logging on to This App, you agree to be bound by the This Bank Terms of Use.</p>
+</div>
+</ul>
+<div class="container">
+<h2 style="color:#4D86BF"> Welcome to Govt. College. Rajahmundry</h2>
+<p>
+YES BANK has been recognized amongst the Top and Fastest Growing Banks in various Indian Banking League Tables by prestigious media houses and Global Advisory Firms, and has received several national and international honours for our various Businesses including Corporate Investment Banking, Treasury, Transaction Banking, and Sustainable practices through Responsible Banking. YES BANK is steadily evolving as the Professionals’ Bank of India with the long term mission of “Building the Finest Quality Bank of the World in India” by 2020.</p>
+</div>
+</div>
+<script>
+angular.module('myApp',[])
+.controller('myctrl', ['$scope' , function($scope) {
+   $scope.message = "";
+   
+   $scope.goto = function(){
+   var a=$scope.name;
+    var b=$scope.password;
+	if(a=="User" && b=="Password"){
+     window.location="Detaills.html";
+	  }
+else{
+	alert(b);
+      $scope.message="InvalidEntry.";
+ document.getElementById("msg").style.color="red";
+}
+}
+}]);
+</script>
+
+</body>
+</html>
